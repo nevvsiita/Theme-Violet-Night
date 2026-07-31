@@ -1,0 +1,110 @@
+{
+  "workbench.colorTheme": "Cozy Violet Night 🐾",
+  "workbench.productIconTheme": "bongocat",
+  "workbench.colorCustomizations": {
+    "editor.background": "#13111c",
+    "editor.foreground": "#e2d9f3",
+    "editorLineNumber.foreground": "#4d4266",
+    "editorLineNumber.activeForeground": "#c099ff",
+    "editor.lineHighlightBackground": "#1d182b",
+    "editor.selectionBackground": "#3b2b5c",
+    "editorCursor.foreground": "#c099ff",
+
+    "activityBar.background": "#181524",
+    "activityBar.foreground": "#c099ff",
+    "activityBar.inactiveForeground": "#675b84",
+    "activityBarBadge.background": "#b388ff",
+    "activityBarBadge.foreground": "#13111c",
+
+    "sideBar.background": "#161321",
+    "sideBar.foreground": "#c5b8df",
+    "sideBarTitle.foreground": "#e2d9f3",
+    "sideBarSectionHeader.background": "#1d192b",
+    "sideBarSectionHeader.foreground": "#c099ff",
+    "sideBar.border": "#251f38",
+
+    "titleBar.activeBackground": "#13111c",
+    "titleBar.activeForeground": "#e2d9f3",
+    "titleBar.inactiveBackground": "#13111c",
+    "titleBar.inactiveForeground": "#675b84",
+    "titleBar.border": "#251f38",
+
+    "statusBar.background": "#161321",
+    "statusBar.foreground": "#c5b8df",
+    "statusBar.noFolderBackground": "#161321",
+    "statusBar.border": "#251f38",
+    "statusBarItem.remoteBackground": "#b388ff",
+    "statusBarItem.remoteForeground": "#13111c",
+
+    "tab.activeBackground": "#13111c",
+    "tab.activeForeground": "#e2d9f3",
+    "tab.activeBorderTop": "#b388ff",
+    "tab.inactiveBackground": "#181524",
+    "tab.inactiveForeground": "#7f7399",
+    "editorGroupHeader.tabsBackground": "#161321",
+
+    "panel.background": "#13111c",
+    "panel.border": "#251f38",
+    "panelTitle.activeForeground": "#c099ff",
+    "panelTitle.activeBorder": "#b388ff",
+    "panelTitle.inactiveForeground": "#675b84",
+
+    "terminal.background": "#13111c",
+    "terminal.foreground": "#e2d9f3",
+    "terminalCursor.foreground": "#c099ff"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment", "punctuation.definition.comment"],
+        "settings": {
+          "foreground": "#6a5c8a",
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": ["keyword", "storage.type", "storage.modifier"],
+        "settings": {
+          "foreground": "#c792ea",
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "scope": ["entity.name.function", "support.function", "meta.function-call"],
+        "settings": {
+          "foreground": "#a87ffb"
+        }
+      },
+      {
+        "scope": ["string", "punctuation.definition.string"],
+        "settings": {
+          "foreground": "#e0a6ff"
+        }
+      },
+      {
+        "scope": ["constant.numeric", "constant.language", "constant.character"],
+        "settings": {
+          "foreground": "#ff9ce6"
+        }
+      },
+      {
+        "scope": ["entity.name.type", "entity.name.class", "support.class", "support.type"],
+        "settings": {
+          "foreground": "#94bbfb"
+        }
+      },
+      {
+        "scope": ["variable", "variable.other", "variable.parameter"],
+        "settings": {
+          "foreground": "#e2d9f3"
+        }
+      },
+      {
+        "scope": ["punctuation", "keyword.operator"],
+        "settings": {
+          "foreground": "#b8a9e0"
+        }
+      }
+    ]
+  }
+}

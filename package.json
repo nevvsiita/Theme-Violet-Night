@@ -1,0 +1,105 @@
+{
+  "name": "cozy-violet-theme",
+  "displayName": "Cozy Violet Night 🐾 (Kitty Edition)",
+  "description": "A sleek, aesthetic dark purple and lavender theme with cozy cat vibes 🐱💜 for Antigravity IDE and VS Code.",
+  "version": "1.0.1",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "*"
+  ],
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "keywords": [
+    "cozy",
+    "violet",
+    "purple",
+    "bongo cat",
+    "theme",
+    "dark theme",
+    "kawaii"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Cozy Violet Night 🐾",
+        "uiTheme": "vs-dark",
+        "path": "./themes/cozy-violet-color-theme.json"
+      }
+    ],
+    "productIconThemes": [
+      {
+        "id": "bongocat",
+        "label": "Bongo Cat Icons",
+        "path": "./bongocat-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "extension.toggleStatusBar",
+        "title": "Toggle Bongo Cat"
+      },
+      {
+        "command": "cozyViolet.toggleBongoCat",
+        "title": "Cozy Violet: Toggle Bongo Cat"
+      }
+    ],
+    "icons": {
+      "bg-leftup": {
+        "description": "Bongo Cat left paw up",
+        "default": {
+          "fontPath": "./bongocat.woff",
+          "fontCharacter": "\\62"
+        }
+      },
+      "bg-leftdown": {
+        "description": "Bongo Cat left paw down",
+        "default": {
+          "fontPath": "./bongocat.woff",
+          "fontCharacter": "\\64"
+        }
+      },
+      "bg-rightup": {
+        "description": "Bongo Cat right paw up",
+        "default": {
+          "fontPath": "./bongocat.woff",
+          "fontCharacter": "\\63"
+        }
+      },
+      "bg-rightdown": {
+        "description": "Bongo Cat right paw down",
+        "default": {
+          "fontPath": "./bongocat.woff",
+          "fontCharacter": "\\61"
+        }
+      }
+    },
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/cat-snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/cat-snippets.json"
+      },
+      {
+        "language": "markdown",
+        "path": "./snippets/cat-snippets.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/cat-snippets.json"
+      },
+      {
+        "language": "css",
+        "path": "./snippets/cat-snippets.json"
+      }
+    ]
+  }
+}
