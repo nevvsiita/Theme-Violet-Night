@@ -1,15 +1,16 @@
 const vscode = require('vscode');
 
 /**
- * Bongo Cat en la barra de estado
+ * Bongo Cat Mascot en la barra de estado
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
   try {
+    // Array de estados animados con fallback garantizado (Emojis + ASCII + Iconos Font)
     const statusTextArray = [
-      '$(bg-leftup)$(bg-rightup)',
-      '$(bg-leftdown)$(bg-rightup)',
-      '$(bg-leftup)$(bg-rightdown)'
+      '🐱 ฅ^•ﻌ•^ฅ $(bg-leftup)$(bg-rightup)',
+      '🐾 ฅ^•ﻌ•^ฅ $(bg-leftdown)$(bg-rightup)',
+      'ฅ^•ﻌ•^ฅ 🐾 $(bg-leftup)$(bg-rightdown)'
     ];
 
     let currentIndex = 0;
@@ -17,7 +18,7 @@ function activate(context) {
     let timeout;
     let isVisible = true;
 
-    // Crear el ítem de la barra de estado con id único y alta prioridad
+    // Crear el ítem en el lado derecho de la barra de estado con alta prioridad
     const statusBarItem = vscode.window.createStatusBarItem(
       'cozyVioletBongoCat',
       vscode.StatusBarAlignment.Right,
@@ -26,11 +27,11 @@ function activate(context) {
 
     statusBarItem.name = 'Bongo Cat Mascot';
     statusBarItem.text = statusTextArray[0];
-    statusBarItem.tooltip = '🐱 Bongo Cat — Haz clic para toggle u opcionales / ¡Escribe para animarlo!';
-    statusBarItem.command = 'cozyViolet.toggleBongoCat';
+    statusBarItem.tooltip = '🐱 Bongo Cat — ¡Escribe para animarme o haz clic para acariciarme!';
+    statusBarItem.command = 'cozyViolet.petBongoCat';
     statusBarItem.show();
 
-    // Animar al escribir en el documento activo
+    // Evento al escribir en el documento activo
     const onTextChanged = vscode.workspace.onDidChangeTextDocument((event) => {
       if (vscode.window.activeTextEditor && event.document === vscode.window.activeTextEditor.document) {
         currentIndex = leftWasLastDown ? 2 : 1;
@@ -47,22 +48,35 @@ function activate(context) {
 
     context.subscriptions.push(onTextChanged, statusBarItem);
 
-    // Registro de comando interactivo
+    // Registro de comandos
     const toggleHandler = () => {
       isVisible = !isVisible;
       if (isVisible) {
         statusBarItem.show();
-        vscode.window.showInformationMessage('🐱 Bongo Cat está visible en la barra de estado (abajo a la derecha).');
+        vscode.window.showInformationMessage('🐱 Bongo Cat está visible en la barra de estado.');
       } else {
         statusBarItem.hide();
         vscode.window.showInformationMessage('🐱 Bongo Cat se ha ocultado.');
       }
     };
 
+    const petMessages = [
+      'ฅ^•ﻌ•^ฅ *purrrrrr* 💜 ¡Gracias por acariciarme!',
+      '(=^‧^=) ¡Bongo Cat está feliz programando contigo!',
+      '(ฅ'ω'ฅ) 🐾 ¡Patitas en el teclado!',
+      '🐱 ¡Miau! Sigue programando increíble ✨'
+    ];
+
+    const petHandler = () => {
+      const msg = petMessages[Math.floor(Math.random() * petMessages.length)];
+      vscode.window.showInformationMessage(msg);
+    };
+
     const cmd1 = vscode.commands.registerCommand('extension.toggleStatusBar', toggleHandler);
     const cmd2 = vscode.commands.registerCommand('cozyViolet.toggleBongoCat', toggleHandler);
+    const cmd3 = vscode.commands.registerCommand('cozyViolet.petBongoCat', petHandler);
 
-    context.subscriptions.push(cmd1, cmd2);
+    context.subscriptions.push(cmd1, cmd2, cmd3);
 
     console.log('Bongo Cat activado correctamente en la barra de estado.');
   } catch (err) {

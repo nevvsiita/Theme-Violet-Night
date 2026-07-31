@@ -47,6 +47,10 @@
       {
         "command": "cozyViolet.toggleBongoCat",
         "title": "Cozy Violet: Toggle Bongo Cat"
+      },
+      {
+        "command": "cozyViolet.petBongoCat",
+        "title": "🐾 Acariciar a Bongo Cat"
       }
     ],
     "icons": {
