@@ -1,7 +1,7 @@
 {
   "name": "cozy-violet-theme",
-  "displayName": "Cozy Violet Night 🐾",
-  "description": "A sleek, aesthetic dark purple and lavender theme for Antigravity IDE and VS Code.",
+  "displayName": "Cozy Violet Night 🐾 (Kitty Edition)",
+  "description": "A sleek, aesthetic dark purple and lavender theme with cozy Bongo Cat 🐱💜 for Antigravity IDE and VS Code.",
   "version": "1.0.1",
   "icon": "icon.png",
   "engines": {
@@ -12,14 +12,19 @@
     "*"
   ],
   "categories": [
-    "Themes"
+    "Themes",
+    "Other"
   ],
   "keywords": [
-    "cozy",
-    "violet",
-    "purple",
+    "bongo cat",
+    "bongocat",
+    "pet",
+    "buddy",
+    "cute",
+    "cat",
     "theme",
-    "dark theme"
+    "cozy",
+    "violet"
   ],
   "contributes": {
     "themes": [
@@ -29,6 +34,49 @@
         "path": "./themes/cozy-violet-color-theme.json"
       }
     ],
+    "productIconThemes": [
+      {
+        "id": "bongocat",
+        "label": "Bongo Cat Icons",
+        "path": "./bongocat-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "extension.toggleStatusBar",
+        "title": "Toggle Bongo Cat"
+      }
+    ],
+    "icons": {
+      "bg-leftup": {
+        "description": "bg left up",
+        "default": {
+          "fontPath": "./bongocat.woff",
+          "fontCharacter": "\\62"
+        }
+      },
+      "bg-leftdown": {
+        "description": "bg left down",
+        "default": {
+          "fontPath": "./bongocat.woff",
+          "fontCharacter": "\\64"
+        }
+      },
+      "bg-rightup": {
+        "description": "bg right up",
+        "default": {
+          "fontPath": "./bongocat.woff",
+          "fontCharacter": "\\63"
+        }
+      },
+      "bg-rightdown": {
+        "description": "bg right down",
+        "default": {
+          "fontPath": "./bongocat.woff",
+          "fontCharacter": "\\61"
+        }
+      }
+    },
     "snippets": [
       {
         "language": "javascript",

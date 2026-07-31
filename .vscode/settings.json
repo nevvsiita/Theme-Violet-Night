@@ -1,5 +1,6 @@
 {
   "workbench.colorTheme": "Cozy Violet Night 🐾",
+  "workbench.productIconTheme": "bongocat",
   "workbench.colorCustomizations": {
     "editor.background": "#13111c",
     "editor.foreground": "#e2d9f3",
